@@ -36,6 +36,6 @@ app.add_middleware(
 app.include_router(api_router)
 
 
-@app.get("/")
+@app.get("/health")
 async def health_check():
     return JSONResponse({"status": "success", "message": "Welcome to RAGDOC"})
